@@ -1,33 +1,43 @@
-import { Dayjs } from 'dayjs';
+export interface TaskItemResponse {
+  id: string;
+  title: string;
+  description: string;
+  status: string;
+  dueDate: string;
+  creationDate: string;
+}
 
-export enum TaskPriority {
-  Low = 'Low',
-  Medium = 'Medium',
-  High = 'High',
-  Critical = 'Critical',
+export interface TaskPayload {
+  data: Task[];
+  totalPages: number;
+  count: number;
+  currentPage: number;
+  firstPage: number;
+  lastPage: number;
+  nextPage: number | null;
+  prevPage: number | null;
+}
+
+export interface TaskResponse {
+  data: TaskItemResponse[];
+  pages: number;
+  items: number;
+  first: number;
+  last: number;
+  next: number | null;
+  prev: number | null;
 }
 
 export interface Task {
   id: string;
   title: string;
-  priority: string;
+  description: string;
   status: string;
   dueDate: string;
   creationDate: string;
-  description?: string;
-}
-
-export interface TaskResponse {
-  data: Task[];
-  first: number;
-  items: number;
-  last: number;
-  next: number;
-  pages: number;
-  prev: number;
 }
 
 export interface TaskState {
-  data: TaskResponse;
+  list: TaskPayload;
   isLoading: boolean;
 }

@@ -1,23 +1,27 @@
-// Fetch tasks from the API
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import get from '@/api/get.ts';
-import { Task, TaskResponse } from '@/store/data/task/types.ts';
-import post from '@/api/post.ts';
+import { mapTasks } from '@/store/data/task/utils/mapTasks.ts';
 
-const fetchTasks = createAsyncThunk('task/fetchTasks', async (page: number) => {
-  const url = `http://localhost:4000/tasks?_page=${page}`;
-  const response = await get<TaskResponse>(url);
-  console.log('response: ', response);
-  return response;
-});
+const BASE_URL = 'http://localhost:4000/tasks';
 
-const createTask = createAsyncThunk(
-  'task/createTask',
-  async (payload: Partial<Task>) => {
-    const url = 'http://localhost:4000/tasks';
-    const response = await post(url, payload);
-    return response;
+export interface FetchTasksParams {
+  page: number;
+  title?: string;
+}
+
+const fetchTasks = createAsyncThunk(
+  'task/fetchTasks',
+  async ({ page, title }: FetchTasksParams, { rejectWithValue }) => {
+    const queryParams = new URLSearchParams({ _page: page.toString() });
+    try {
+      const url = `${BASE_URL}?${queryParams.toString()}`;
+      const data = await get(url, title);
+      return mapTasks(data);
+    } catch (err) {
+      console.log('EROAREEEEE, ', err);
+      return rejectWithValue(err);
+    }
   },
 );
 
-export { fetchTasks, createTask };
+export { fetchTasks };

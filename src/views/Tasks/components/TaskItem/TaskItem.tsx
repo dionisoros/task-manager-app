@@ -1,50 +1,29 @@
-import React, { FunctionComponent, useState } from 'react';
-import {
-  Card,
-  CardContent,
-  Typography,
-  CardActions,
-  IconButton,
-  Box,
-  Grid,
-  Chip,
-  Button,
-  Collapse,
-} from '@mui/material';
-import EditIcon from '@mui/icons-material/Edit';
-import DeleteIcon from '@mui/icons-material/Delete';
+import { FunctionComponent, useMemo } from 'react';
+import { Card, CardContent, Typography, Box, Grid, Chip } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
-import { Task, TaskPriority } from '../../../../store/data/task/types.ts';
-import react from '@vitejs/plugin-react-swc';
+import { Task } from '@/store/data/task/types.ts';
+import { statusColors } from '@/views/Tasks/utils/mapStatusToColors.ts';
+import { useTranslation } from 'react-i18next';
+import { getTranslatedStatus } from '@/views/Tasks/utils/mapStatusToTranslations.ts';
 
 interface TaskItemProps {
   task: Task;
-  onEdit: (id: string) => void;
-  onDelete: (id: string) => void;
 }
 
-const statusColors: Record<string, string> = {
-  'Ready for Work': 'default',
-  'In Progress': 'primary',
-  Completed: 'success',
-};
+const TaskItem: FunctionComponent<TaskItemProps> = ({ task }) => {
+  const { t: translate } = useTranslation();
 
-const TaskItem: FunctionComponent<TaskItemProps> = ({
-  task,
-  onEdit,
-  onDelete,
-}) => {
+  const translatedStatus = useMemo(() => getTranslatedStatus(translate), [translate]);
+
   return (
     <Grid item xs={12} sm={6} md={3} key={task.id}>
       <Card
+        tabIndex={0}
         sx={{
-          // width: 300, // Fixed width for the card
-          // height: 250, // Fixed height for the card
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          position: 'relative',
         }}
       >
         <CardContent
@@ -54,12 +33,7 @@ const TaskItem: FunctionComponent<TaskItemProps> = ({
             gap: '16px',
           }}
         >
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="space-between"
-            gap="8px"
-          >
+          <Box display="flex" alignItems="center" justifyContent="space-between" gap="8px">
             <Typography
               variant="h6"
               component="div"
@@ -73,17 +47,14 @@ const TaskItem: FunctionComponent<TaskItemProps> = ({
               {task.title}
             </Typography>
             <Chip
-              label={task.status}
-              color={statusColors[task.status] as any}
+              label={translatedStatus[task.status]}
+              color={statusColors[task.status]}
               variant="outlined"
               sx={{ fontWeight: 'bold' }}
             />
           </Box>
           <Box
             sx={{
-              // whiteSpace: 'normal',
-              // overflow: 'hidden',
-              // textOverflow: 'ellipsis',
               height: '100px',
             }}
           >
@@ -96,9 +67,8 @@ const TaskItem: FunctionComponent<TaskItemProps> = ({
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
                 WebkitBoxOrient: 'vertical',
-                WebkitLineClamp: 3, // Limits the description to 3 lines
-                // maxHeight: '4.5em', // Approximately 3 lines of text
-                height: '100%'
+                WebkitLineClamp: 3,
+                height: '100%',
               }}
             >
               {task.description}
@@ -111,13 +81,14 @@ const TaskItem: FunctionComponent<TaskItemProps> = ({
               gap: '8px',
             }}
           >
-            <Box display="flex" alignItems="center">
-              <CalendarTodayIcon fontSize="small" sx={{ mr: 0.5 }} />
+            <Box display="flex" alignItems="center" gap="4px">
+              <CalendarTodayIcon fontSize="small" />
               <Typography variant="body2" color="text.secondary">
-                Due Date: {task.dueDate}
+                {translate('app.translation.task.DueDate')}: {task.dueDate}
               </Typography>
             </Box>
-            <Box>
+            <Box display="flex" alignItems="center" gap="4px">
+              <AccessTimeIcon fontSize="small" />
               <Typography
                 variant="body2"
                 color="text.secondary"
@@ -125,32 +96,16 @@ const TaskItem: FunctionComponent<TaskItemProps> = ({
                   fontStyle: 'italic',
                   display: 'flex',
                   alignItems: 'center',
-                  mb: 1,
                 }}
               >
-                <AccessTimeIcon fontSize="small" sx={{ mr: 0.5 }} />
-                Created: {task.creationDate}
+                {translate('app.translation.task.Created')}: {task.creationDate}
               </Typography>
             </Box>
           </Box>
         </CardContent>
-        {/*<CardActions>*/}
-        {/*  <Box sx={{ marginLeft: 'auto' }}>*/}
-        {/*    <IconButton color="primary" onClick={() => onEdit(task.id)}>*/}
-        {/*      <EditIcon />*/}
-        {/*    </IconButton>*/}
-        {/*    <IconButton color="secondary" onClick={() => onDelete(task.id)}>*/}
-        {/*      <DeleteIcon />*/}
-        {/*    </IconButton>*/}
-        {/*  </Box>*/}
-        {/*</CardActions>*/}
       </Card>
     </Grid>
   );
 };
 
 export default TaskItem;
-
-// sx={{
-//   animation: `${index === 0 ? 'slideInRight' : ''} 0.5s`,
-// }}

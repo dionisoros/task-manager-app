@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import React, { useState } from 'react';
+import LanguageTypes from '@/types/Language.ts';
 
 const useTranslationMenu = () => {
   const { i18n, t: translate } = useTranslation();
@@ -14,7 +15,7 @@ const useTranslationMenu = () => {
     setMenuEl(null);
   };
 
-  const handleLanguageChange = (language: string) => {
+  const handleLanguageChange = (language: LanguageTypes) => {
     i18n.changeLanguage(language).then(() => handleLanguageClose());
   };
 

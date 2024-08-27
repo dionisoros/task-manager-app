@@ -2,264 +2,243 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Complete project documentation",
-      "description": "Finish writing the project documentation including API specs and deployment steps.",
-      "dueDate": "2024-09-10",
-      "priority": "High",
-      "status": "In Progress",
-      "creationDate": "2024-08-20"
+      "title": "Design",
+      "description": "Create a responsive design for the homepage.",
+      "status": "in-progress",
+      "dueDate": "02/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
       "id": "2",
-      "title": "Implement authentication",
-      "description": "Add JWT authentication to the backend and protect the API routes.",
-      "dueDate": "09/26/2024",
-      "priority": "Low",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-18"
+      "title": "Implement Authentication",
+      "description": "Set up user authentication using OAuth2.",
+      "status": "ready-for-work",
+      "dueDate": "17/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
       "id": "3",
-      "title": "Design the landing page",
-      "description": "Create the UI design for the landing page including the hero section and feature highlights.",
-      "dueDate": "2024-09-01",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-22"
+      "title": "Database Schema Design",
+      "description": "Design the database schema for the new project.",
+      "status": "completed",
+      "dueDate": "12/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
       "id": "4",
-      "title": "Optimize database queries",
-      "description": "Refactor the database queries to improve performance for large data sets.",
-      "dueDate": "2024-09-12",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-19"
+      "title": "API Integration",
+      "description": "Integrate the third-party API for payment processing.",
+      "status": "in-progress",
+      "dueDate": "03/09/2024",
+      "creationDate": "05/09/2024"
     },
     {
       "id": "5",
-      "title": "Setup CI/CD pipeline",
-      "description": "Integrate the project with a CI/CD tool to automate testing and deployments.",
-      "dueDate": "2024-09-15",
-      "priority": "Critical",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-21"
+      "title": "Write Unit Tests",
+      "description": "Create unit tests for the user service module.",
+      "status": "ready-for-work",
+      "dueDate": "18/09/2024",
+      "creationDate": "06/09/2024"
     },
     {
       "id": "6",
-      "title": "Write unit tests",
-      "description": "Create unit tests for the key components of the application to ensure code quality.",
-      "dueDate": "2024-09-08",
-      "priority": "Medium",
-      "status": "Completed",
-      "creationDate": "2024-08-25"
+      "title": "Bug Fixing",
+      "description": "Fix critical bugs in the user interface.",
+      "status": "in-progress",
+      "dueDate": "22/09/2024",
+      "creationDate": "07/09/2024"
     },
     {
       "id": "7",
-      "title": "Create onboarding tutorial",
-      "description": "Develop an interactive onboarding tutorial for new users of the application.",
-      "dueDate": "2024-09-18",
-      "priority": "Low",
-      "status": "In Progress",
-      "creationDate": "2024-08-23"
+      "title": "Code Review",
+      "description": "Perform a code review for the latest feature branch.",
+      "status": "completed",
+      "dueDate": "14/09/2024",
+      "creationDate": "08/09/2024"
     },
     {
       "id": "8",
-      "title": "Fix login bug",
-      "description": "Resolve the issue causing intermittent login failures for some users.",
-      "dueDate": "2024-08-30",
-      "priority": "High",
-      "status": "Completed",
-      "creationDate": "2024-08-15"
+      "title": "Optimize Database Queries",
+      "description": "Improve the performance of database queries.",
+      "status": "ready-for-work",
+      "dueDate": "25/09/2024",
+      "creationDate": "09/09/2024"
     },
     {
       "id": "9",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "title": "Content Update",
+      "description": "Update website content as per the new guidelines.",
+      "status": "completed",
+      "dueDate": "13/09/2024",
+      "creationDate": "10/09/2024"
     },
     {
       "id": "10",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "title": "Prepare Deployment",
+      "description": "Prepare the project for production deployment.",
+      "status": "in-progress",
+      "dueDate": "23/09/2024",
+      "creationDate": "11/09/2024"
     },
     {
       "id": "11",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "title": "Design About Page",
+      "description": "Create the design layout for the About page.",
+      "status": "ready-for-work",
+      "dueDate": "16/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
       "id": "12",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Completed",
-      "creationDate": "2024-08-29"
+      "title": "Implement User Profiles",
+      "description": "Develop user profile features and settings.",
+      "status": "in-progress",
+      "dueDate": "19/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
-      "id": "9",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "13",
+      "title": "Security Audit",
+      "description": "Perform a security audit on the application.",
+      "status": "completed",
+      "dueDate": "12/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
-      "id": "10",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "14",
+      "title": "API Documentation",
+      "description": "Document all the API endpoints for developers.",
+      "status": "in-progress",
+      "dueDate": "20/09/2024",
+      "creationDate": "05/09/2024"
     },
     {
-      "id": "11",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "15",
+      "title": "Setup CI/CD",
+      "description": "Configure continuous integration and deployment pipelines.",
+      "status": "ready-for-work",
+      "dueDate": "18/09/2024",
+      "creationDate": "06/09/2024"
     },
     {
-      "id": "12",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "16",
+      "title": "Frontend Refactoring",
+      "description": "Refactor the frontend codebase for better maintainability.",
+      "status": "in-progress",
+      "dueDate": "22/09/2024",
+      "creationDate": "07/09/2024"
     },
     {
-      "id": "9",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "17",
+      "title": "Code Documentation",
+      "description": "Document the codebase for better understanding.",
+      "status": "completed",
+      "dueDate": "14/09/2024",
+      "creationDate": "08/09/2024"
     },
     {
-      "id": "10",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "18",
+      "title": "Optimize Images",
+      "description": "Compress and optimize images for faster load times.",
+      "status": "ready-for-work",
+      "dueDate": "25/09/2024",
+      "creationDate": "09/09/2024"
     },
     {
-      "id": "11",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "19",
+      "title": "Add Analytics",
+      "description": "Integrate analytics to track user behavior.",
+      "status": "completed",
+      "dueDate": "13/09/2024",
+      "creationDate": "10/09/2024"
     },
     {
-      "id": "12",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "20",
+      "title": "Database Backup",
+      "description": "Setup automated database backup procedures.",
+      "status": "in-progress",
+      "dueDate": "23/09/2024",
+      "creationDate": "11/09/2024"
     },
     {
-      "id": "9",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "21",
+      "title": "Design Contact Page",
+      "description": "Create a layout design for the Contact page.",
+      "status": "ready-for-work",
+      "dueDate": "16/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
-      "id": "10",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "22",
+      "title": "Implement Notifications",
+      "description": "Add push notification support for the app.",
+      "status": "in-progress",
+      "dueDate": "19/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
-      "id": "11",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "23",
+      "title": "Accessibility Audit",
+      "description": "Ensure the app meets accessibility standards.",
+      "status": "completed",
+      "dueDate": "12/09/2024",
+      "creationDate": "01/09/2024"
     },
     {
-      "id": "12",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "24",
+      "title": "Setup Testing Framework",
+      "description": "Integrate a testing framework for unit tests.",
+      "status": "in-progress",
+      "dueDate": "20/09/2024",
+      "creationDate": "05/09/2024"
     },
     {
-      "id": "9",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "25",
+      "title": "Server Configuration",
+      "description": "Configure the server for optimal performance.",
+      "status": "ready-for-work",
+      "dueDate": "18/09/2024",
+      "creationDate": "06/09/2024"
     },
     {
-      "id": "10",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "26",
+      "title": "UI/UX Review",
+      "description": "Conduct a UI/UX review to improve user experience.",
+      "status": "in-progress",
+      "dueDate": "22/09/2024",
+      "creationDate": "07/09/2024"
     },
     {
-      "id": "11",
-      "title": "Review code for security vulnerabilities",
-      "description": "Conduct a thorough review of the codebase to identify and fix any security vulnerabilities.",
-      "dueDate": "2024-09-20",
-      "priority": "Critical",
-      "status": "In Progress",
-      "creationDate": "2024-08-27"
+      "id": "27",
+      "title": "Technical Documentation",
+      "description": "Document the technical architecture of the app.",
+      "status": "completed",
+      "dueDate": "14/09/2024",
+      "creationDate": "08/09/2024"
     },
     {
-      "id": "12",
-      "title": "Prepare for product launch",
-      "description": "Coordinate with the marketing team to prepare all assets for the upcoming product launch.",
-      "dueDate": "2024-09-25",
-      "priority": "High",
-      "status": "Ready for Work",
-      "creationDate": "2024-08-29"
+      "id": "28",
+      "title": "Video Optimization",
+      "description": "Optimize video files for faster streaming.",
+      "status": "ready-for-work",
+      "dueDate": "25/09/2024",
+      "creationDate": "09/09/2024"
     },
     {
-      "id": "a9e6",
-      "title": "123",
-      "priority": "High",
-      "dueDate": "08/27/2024",
-      "description": "12341234",
-      "status": "Ready for Work",
-      "creationDate": "08/26/2024"
+      "id": "29",
+      "title": "SEO Optimization",
+      "description": "Improve the app's SEO to increase visibility.",
+      "status": "completed",
+      "dueDate": "13/09/2024",
+      "creationDate": "10/09/2024"
+    },
+    {
+      "id": "30",
+      "title": "Data Migration",
+      "description": "Migrate the database to a new server.",
+      "status": "completed",
+      "dueDate": "13/09/2024",
+      "creationDate": "10/09/2024"
     }
   ]
 }

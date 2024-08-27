@@ -1,11 +1,24 @@
 import axios from 'axios';
+import { TaskItemResponse, TaskResponse } from '@/store/data/task/types.ts';
 
-const get = async <T>(url: string): Promise<T> => {
-  await new Promise(resolve => setTimeout(resolve, 1000));
+// Helper function to simulate a delay
+const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
-  const { data } = await axios.get<T>(url);
+const get = async (url: string, titleValue: string | undefined): Promise<TaskResponse> => {
+  await delay(1000);
 
-  return data;
+  const { data } = await axios.get<TaskResponse>(url);
+
+  if (!titleValue) return data;
+
+  const filteredData = data.data.filter((task: TaskItemResponse) =>
+    task.title.toLowerCase().includes(titleValue.toLowerCase()),
+  );
+
+  return {
+    ...data,
+    data: filteredData,
+  };
 };
 
 export default get;

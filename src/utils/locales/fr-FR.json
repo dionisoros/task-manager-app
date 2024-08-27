@@ -2,6 +2,14 @@
   "translation": {
     "app.title": "Gestionnaire de tâches",
     "app.translation.language.en": "Anglais",
-    "app.translation.language.fr": "Français"
+    "app.translation.language.fr": "Français",
+    "app.translation.task.status.ReadyForWork": "Prêt pour le travail",
+    "app.translation.task.status.InProgress": "En cours",
+    "app.translation.task.status.Completed": "Terminé",
+    "app.translation.task.DueDate": "Date d'échéance",
+    "app.translation.task.Created": "Créé",
+    "app.translation.header.SearchPlaceholder": "Rechercher par titre...",
+    "app.translation.header.ariaLabel.SwitchToDarkMode": "Passer en mode sombre",
+    "app.translation.header.ariaLabel.SwitchToLightMode": "Passer en mode clair"
   }
 }
