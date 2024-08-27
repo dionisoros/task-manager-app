@@ -1,17 +1,14 @@
 import { ChangeEvent, FunctionComponent, memo } from 'react';
 import { TextField, Box } from '@mui/material';
-import {useTranslation} from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 interface TaskHeaderProps {
   searchValue: string;
   onSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const TaskHeader: FunctionComponent<TaskHeaderProps> = ({
-  searchValue,
-  onSearchChange,
-}) => {
-  const {t: translate} = useTranslation();
+const TaskHeader: FunctionComponent<TaskHeaderProps> = ({ searchValue, onSearchChange }) => {
+  const { t: translate } = useTranslation();
   return (
     <Box
       sx={{
