@@ -3,9 +3,9 @@ import { Card, CardContent, Typography, Box, Grid, Chip } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { Task } from '@/store/data/task/types.ts';
-import { statusColors } from '@/views/Tasks/utils/mapStatusToColors.ts';
 import { useTranslation } from 'react-i18next';
-import { getTranslatedStatus } from '@/views/Tasks/utils/mapStatusToTranslations.ts';
+import { getTranslatedStatus } from '../../utils/mapStatusToTranslations';
+import { statusColors } from '../../utils/mapStatusToColors';
 
 interface TaskItemProps {
   task: Task;

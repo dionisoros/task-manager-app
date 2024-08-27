@@ -3,9 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import { ThemeProvider, Box, CssBaseline } from '@mui/material';
 import { lightTheme, darkTheme } from './utils/theme';
 import Home from './views/Home';
-import Tasks from './views/Tasks';
 import RouterUrl from '@/types/RouterUrl.ts';
 import Navbar from '@/components/Navbar';
+import TaskView from '@/views/TaskView';
 
 const App: FunctionComponent = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -17,7 +17,7 @@ const App: FunctionComponent = () => {
         <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
         <Routes>
           <Route path={RouterUrl.Home} element={<Home />} />
-          <Route path={RouterUrl.Tasks} element={<Tasks />} />
+          <Route path={RouterUrl.Tasks} element={<TaskView />} />
         </Routes>
       </Box>
     </ThemeProvider>

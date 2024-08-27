@@ -14,7 +14,7 @@ import paginationStyles from './styles/paginationStyles';
 import useGetTasks from '@/hooks/useGetTasks.ts';
 import SkeletonLoading from '@/components/Skeleton';
 
-const Tasks: FunctionComponent = () => {
+const TaskView: FunctionComponent = () => {
   const tasks = useSelector(getTasks);
   const pages = useSelector(getPages);
   const currentPage = useSelector(getCurrentPage);
@@ -28,7 +28,7 @@ const Tasks: FunctionComponent = () => {
       <TaskHeader searchValue={searchValue} onSearchChange={handleOnSearch} />
       <Divider />
       {isLoadingTasks ? <SkeletonLoading /> : <TaskList tasks={tasks} />}
-      {showPagination && (
+      {showPagination && tasks.length > 0 && (
         <Pagination
           disabled={isLoadingTasks}
           count={pages}
@@ -41,4 +41,4 @@ const Tasks: FunctionComponent = () => {
   );
 };
 
-export default Tasks;
+export default TaskView;

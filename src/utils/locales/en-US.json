@@ -10,6 +10,7 @@
     "app.translation.task.Created": "Created",
     "app.translation.header.SearchPlaceholder": "Search by title...",
     "app.translation.header.ariaLabel.SwitchToDarkMode": "Switch to dark mode",
-    "app.translation.header.ariaLabel.SwitchToLightMode": "Switch to light mode"
+    "app.translation.header.ariaLabel.SwitchToLightMode": "Switch to light mode",
+    "app.translation.tasks.NoResultsFound": "No results found."
   }
 }

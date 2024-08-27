@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import gridListStyles from '@/views/Tasks/styles/gridListStyles.ts';
 import { Grid } from '@mui/material';
+import gridListStyles from '@/views/TaskView/styles/gridListStyles.ts';
 
 type ListProps = {
   children: ReactNode;
