@@ -1,5 +1,5 @@
 import { FunctionComponent, useMemo } from 'react';
-import { Card, CardContent, Typography, Box, Grid, Chip } from '@mui/material';
+import { Typography, Box, Chip } from '@mui/material';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import { useTranslation } from 'react-i18next';

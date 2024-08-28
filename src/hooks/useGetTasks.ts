@@ -21,8 +21,7 @@ const useGetTasks = (currentPage: number) => {
   );
 
   const handleOnSearch = useCallback(
-    (event: ChangeEvent<HTMLInputElement>) => {
-      const value = event.target.value;
+    (value: string) => {
       setSearchValue(value);
       debouncedFn(value);
     },

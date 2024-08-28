@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 interface TaskHeaderProps {
   searchValue: string;
-  onSearchChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onSearchChange: (value: string) => void;
 }
 
 const TaskHeader: FunctionComponent<TaskHeaderProps> = ({ searchValue, onSearchChange }) => {
@@ -23,6 +23,7 @@ const TaskHeader: FunctionComponent<TaskHeaderProps> = ({ searchValue, onSearchC
       <Typography
         variant="h5"
         title={translate('app.translation.title.TaskList')}
+        data-testid="tasks-title"
         sx={{
           // flex: '0 0 auto',
           whiteSpace: 'nowrap',
@@ -33,12 +34,13 @@ const TaskHeader: FunctionComponent<TaskHeaderProps> = ({ searchValue, onSearchC
         {translate('app.translation.title.TaskList')}
       </Typography>
       <TextField
+        data-testid="search-input"
         sx={{ ...(matches ? { width: '35%' } : { flex: '1 1 auto' }) }}
         label={translate('app.translation.header.SearchPlaceholder')}
         variant="outlined"
         placeholder={translate('app.translation.header.SearchPlaceholder')}
         value={searchValue}
-        onChange={onSearchChange}
+        onChange={(ev) => onSearchChange(ev.target.value)}
       />
     </Box>
   );

@@ -8,7 +8,7 @@ interface TaskItemProps {
 }
 
 const TaskItem: FunctionComponent<TaskItemProps> = ({ task }) => (
-  <Grid item xs={12} sm={6} md={3} key={task.id}>
+  <Grid item xs={12} sm={6} md={3} key={task.id} data-testid={`task-id-${task.id}`}>
     <Card
       tabIndex={0}
       sx={{

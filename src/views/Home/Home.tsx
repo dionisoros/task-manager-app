@@ -1,4 +1,4 @@
-import React from 'react';
+import { FunctionComponent } from 'react';
 import { Typography, Button, Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import RouterUrl from '@/types/RouterUrl.ts';
@@ -6,7 +6,7 @@ import { fadeInDown, pulse } from './styles/animations';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import { useTranslation } from 'react-i18next';
 
-const Home: React.FC = () => {
+const Home: FunctionComponent = () => {
   const { t: translate } = useTranslation();
 
   return (
@@ -39,6 +39,7 @@ const Home: React.FC = () => {
         variant="contained"
         color="primary"
         size="large"
+        data-testid="view-tasks-link-button"
         aria-label={translate('app.translation.button.ViewTasks')}
         sx={{
           animation: `${pulse} 1.5s infinite`,

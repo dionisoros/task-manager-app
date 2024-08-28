@@ -20,7 +20,7 @@ const TaskList: FunctionComponent<TaskListProps> = ({ tasks }) => {
     );
   }
   return (
-    <Grid container spacing={4} columns={12} padding={3} sx={gridListStyles}>
+    <Grid container spacing={4} columns={12} padding={3} sx={gridListStyles} data-testid="tasks-list">
       {tasks.map(item => (
         <TaskItem task={item} key={item.id} />
       ))}
