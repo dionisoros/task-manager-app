@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import React, { useState } from 'react';
+import { useState, MouseEvent } from 'react';
 import LanguageTypes from '@/types/Language.ts';
 
 const useTranslationMenu = () => {
@@ -7,7 +7,7 @@ const useTranslationMenu = () => {
   const { language: selectedLanguage } = i18n;
   const [menuEl, setMenuEl] = useState<null | HTMLElement>(null);
 
-  const handleOnClickLanguage = (event: React.MouseEvent<HTMLElement>) => {
+  const handleOnClickLanguage = (event: MouseEvent<HTMLElement>) => {
     setMenuEl(event.currentTarget);
   };
 

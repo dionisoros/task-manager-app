@@ -45,6 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           {pathname !== RouterUrl.Home && (
             <Button
               component={Link}
+              data-testid="home-link-button"
               to={RouterUrl.Home}
               aria-label={translate('app.translation.button.Home')}
               color="inherit"
@@ -54,6 +55,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           )}
           <IconButton
             color="inherit"
+            data-testid="dark-mode-toggle-button"
             aria-label={translate(
               `app.translation.header.ariaLabel.${darkMode ? 'SwitchToLightMode' : 'SwitchToDarkMode'}`,
             )}
@@ -63,6 +65,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           </IconButton>
           <IconButton
             color="inherit"
+            data-testid="language-button"
             onClick={handleOnClickLanguage}
             id="language-button"
             aria-haspopup="true"
@@ -73,12 +76,14 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           </IconButton>
           <Menu
             id="language-menu"
+            data-testid="language-menu"
             aria-labelledby="language-button"
             anchorEl={menuEl}
             open={!!menuEl}
             onClose={handleLanguageClose}
           >
             <MenuItem
+              data-testid="language-en"
               onClick={() => handleLanguageChange(LanguageTypes.EN)}
               selected={selectedLanguage === LanguageTypes.EN}
             >

@@ -2,7 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { TaskPayload, TaskState } from './types';
 import { fetchTasks } from './thunks';
 
-const initialState: TaskState = {
+export const initialState: TaskState = {
   list: {
     data: [],
     count: 10,

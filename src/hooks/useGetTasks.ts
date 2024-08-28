@@ -28,7 +28,10 @@ const useGetTasks = (currentPage: number) => {
     [debouncedFn],
   );
 
-  const handlePageChange = (_event: ChangeEvent<unknown>, page: number) => dispatch(fetchTasks({ page }));
+  const handlePageChange = (_event: ChangeEvent<unknown>, page: number) => {
+    console.log('page', page);
+    dispatch(fetchTasks({ page }));
+  }
 
   return {
     searchValue,
