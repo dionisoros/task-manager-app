@@ -8,9 +8,13 @@
     "app.translation.task.status.Completed": "Terminé",
     "app.translation.task.DueDate": "Date d'échéance",
     "app.translation.task.Created": "Créé",
-    "app.translation.header.SearchPlaceholder": "Rechercher par titre...",
+    "app.translation.header.SearchPlaceholder": "Recherche par titre",
     "app.translation.header.ariaLabel.SwitchToDarkMode": "Passer en mode sombre",
     "app.translation.header.ariaLabel.SwitchToLightMode": "Passer en mode clair",
-    "app.translation.tasks.NoResultsFound": "Aucun résultat trouvé."
+    "app.translation.tasks.NoResultsFound": "Aucun résultat trouvé.",
+    "app.translation.HelloMessage": "Bonjour, tekmetric !",
+    "app.translation.button.Home": "Accueil",
+    "app.translation.button.ViewTasks": "Voir les tâches",
+    "app.translation.title.TaskList": "Mes tâches"
   }
 }

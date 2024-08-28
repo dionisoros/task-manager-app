@@ -5,7 +5,7 @@ const mapRawTasks = (tasks: TaskItemResponse[]): Task[] =>
   tasks.map(t => {
     return {
       ...t,
-      dueDate: t.dueDate,
+      dueDate: dayjs(t.creationDate).format('DD-MM-YYYY'),
       creationDate: dayjs(t.creationDate).format('DD-MM-YYYY'),
     };
   });

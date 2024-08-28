@@ -5,7 +5,7 @@ import { lightTheme, darkTheme } from './utils/theme';
 import Home from './views/Home';
 import RouterUrl from '@/types/RouterUrl.ts';
 import Navbar from '@/components/Navbar';
-import TaskView from '@/views/TaskView';
+import TaskView from '@/views/Tasks';
 
 const App: FunctionComponent = () => {
   const [darkMode, setDarkMode] = useState(false);

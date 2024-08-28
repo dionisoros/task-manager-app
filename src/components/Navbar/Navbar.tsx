@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box, Menu, MenuItem } from '@mui/material';
+import { AppBar, Toolbar, Typography, Box, Menu, MenuItem, Button } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -7,6 +7,8 @@ import LanguageIcon from '@mui/icons-material/Language';
 import ChecklistRtlIcon from '@mui/icons-material/ChecklistRtl';
 import useTranslationMenu from '@/hooks/useTranslationMenu.ts';
 import LanguageTypes from '@/types/Language';
+import { Link, useLocation } from 'react-router-dom';
+import RouterUrl from '@/types/RouterUrl.ts';
 
 interface NavbarProps {
   darkMode: boolean;
@@ -16,6 +18,8 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
   const { translate, selectedLanguage, menuEl, handleLanguageClose, handleOnClickLanguage, handleLanguageChange } =
     useTranslationMenu();
+
+  const { pathname } = useLocation();
 
   return (
     <AppBar position="static">
@@ -31,7 +35,23 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
           <ChecklistRtlIcon />
           <Typography variant="h6">{translate('app.title')}</Typography>
         </Box>
-        <Box>
+        <Box
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}
+        >
+          {pathname !== RouterUrl.Home && (
+            <Button
+              component={Link}
+              to={RouterUrl.Home}
+              aria-label={translate('app.translation.button.Home')}
+              color="inherit"
+            >
+              {translate('app.translation.button.Home')}
+            </Button>
+          )}
           <IconButton
             color="inherit"
             aria-label={translate(

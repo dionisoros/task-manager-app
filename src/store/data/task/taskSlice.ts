@@ -23,19 +23,16 @@ const taskSlice = createSlice({
   extraReducers: builder => {
     builder
       .addCase(fetchTasks.pending, state => {
-        // console.log('pending: ');
         state.isLoading = true;
       })
       .addCase(fetchTasks.fulfilled, (state, action: PayloadAction<TaskPayload>) => {
-        // console.log('fullfilled: ', action.payload);
         state.isLoading = false;
         state.list = action.payload;
       })
       .addCase(fetchTasks.rejected, (state, action) => {
         console.log('error: ', action.error.message);
+        // handle error case message
         state.isLoading = false;
-        // state.status = 'failed';
-        // state.error = action.error.message || 'Failed to fetch tasks';
       });
   },
 });

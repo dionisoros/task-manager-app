@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { fetchTasks } from '@/store/data/task/thunks.ts';
 import { debounce } from '@mui/material';
 import { useDispatch } from 'react-redux';
@@ -23,14 +23,13 @@ const useGetTasks = (currentPage: number) => {
   const handleOnSearch = useCallback(
     (event: ChangeEvent<HTMLInputElement>) => {
       const value = event.target.value;
-      console.log('Search tasks: ', value);
       setSearchValue(value);
       debouncedFn(value);
     },
     [debouncedFn],
   );
 
-  const handlePageChange = (event: ChangeEvent<unknown>, page: number) => dispatch(fetchTasks({ page }));
+  const handlePageChange = (_event: ChangeEvent<unknown>, page: number) => dispatch(fetchTasks({ page }));
 
   return {
     searchValue,

@@ -13,12 +13,16 @@ const fetchTasks = createAsyncThunk(
   'task/fetchTasks',
   async ({ page, title }: FetchTasksParams, { rejectWithValue }) => {
     const queryParams = new URLSearchParams({ _page: page.toString() });
+    if (title) {
+      // search should cover "title" OR "description" fields but the "json-server" API doesn't support "OR" operator (only "AND"),
+      // also it doesn't work as expected with "title_like", it only works with exact match "title"
+      queryParams.append('title', title);
+    }
+    const url = `${BASE_URL}?${queryParams.toString()}`;
     try {
-      const url = `${BASE_URL}?${queryParams.toString()}`;
-      const data = await get(url, title);
+      const data = await get(url);
       return mapTasks(data);
     } catch (err) {
-      console.log('EROAREEEEE, ', err);
       return rejectWithValue(err);
     }
   },

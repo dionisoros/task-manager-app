@@ -3,7 +3,7 @@
     {
       "id": "1",
       "title": "Design",
-      "description": "Create a responsive design for the homepage.",
+      "description": "Create a responsive design for the homepage. Use the latest design trends and best practices.",
       "status": "in-progress",
       "dueDate": "02/09/2024",
       "creationDate": "01/09/2024"
@@ -11,7 +11,7 @@
     {
       "id": "2",
       "title": "Implement Authentication",
-      "description": "Set up user authentication using OAuth2.",
+      "description": "Set up user authentication using OAuth2. Grab the user's email address and profile picture from the OAuth2 provider.",
       "status": "ready-for-work",
       "dueDate": "17/09/2024",
       "creationDate": "01/09/2024"
@@ -19,7 +19,7 @@
     {
       "id": "3",
       "title": "Database Schema Design",
-      "description": "Design the database schema for the new project.",
+      "description": "Design the database schema for the new project. Define the tables, columns, and relationships. Add indexes and constraints for performance and data integrity.",
       "status": "completed",
       "dueDate": "12/09/2024",
       "creationDate": "01/09/2024"
@@ -27,7 +27,7 @@
     {
       "id": "4",
       "title": "API Integration",
-      "description": "Integrate the third-party API for payment processing.",
+      "description": "Integrate the third-party API for payment processing. Handle payment failures and retries. Implement webhooks for asynchronous processing.",
       "status": "in-progress",
       "dueDate": "03/09/2024",
       "creationDate": "05/09/2024"
@@ -35,7 +35,7 @@
     {
       "id": "5",
       "title": "Write Unit Tests",
-      "description": "Create unit tests for the user service module.",
+      "description": "Create unit tests for the user service module. Test the CRUD operations and error handling scenarios.",
       "status": "ready-for-work",
       "dueDate": "18/09/2024",
       "creationDate": "06/09/2024"
@@ -107,7 +107,7 @@
     {
       "id": "14",
       "title": "API Documentation",
-      "description": "Document all the API endpoints for developers.",
+      "description": "Document all the API endpoints for developers. Include request and response examples. Provide code snippets for common use cases.",
       "status": "in-progress",
       "dueDate": "20/09/2024",
       "creationDate": "05/09/2024"

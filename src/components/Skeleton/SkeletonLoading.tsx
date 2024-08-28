@@ -2,7 +2,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Skeleton from '@mui/material/Skeleton';
 import Card from '@mui/material/Card';
-import gridListStyles from '@/views/TaskView/styles/gridListStyles.ts';
+import gridListStyles from '@/views/Tasks/styles/gridListStyles.ts';
 
 const SkeletonLoading = (): JSX.Element => (
   <Grid container spacing={4} columns={12} padding={3} sx={gridListStyles}>
