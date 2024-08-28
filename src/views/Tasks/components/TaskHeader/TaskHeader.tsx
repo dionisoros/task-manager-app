@@ -40,7 +40,7 @@ const TaskHeader: FunctionComponent<TaskHeaderProps> = ({ searchValue, onSearchC
         variant="outlined"
         placeholder={translate('app.translation.header.SearchPlaceholder')}
         value={searchValue}
-        onChange={(ev) => onSearchChange(ev.target.value)}
+        onChange={ev => onSearchChange(ev.target.value)}
       />
     </Box>
   );

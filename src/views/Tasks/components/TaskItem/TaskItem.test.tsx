@@ -33,5 +33,4 @@ describe('TaskItem Component', () => {
     const dueDateElement = screen.getByText(/12\/31\/2024/i);
     expect(dueDateElement).toBeInTheDocument();
   });
-
 });

@@ -18,7 +18,7 @@ vi.mock('@mui/material', async () => ({
 
 describe('TaskHeader', () => {
   beforeEach(() => {
-    (useMediaQuery as Mock).mockImplementation((query) => query === '(min-width: 720px)');
+    (useMediaQuery as Mock).mockImplementation(query => query === '(min-width: 720px)');
   });
 
   it('should render the title and search', () => {
@@ -34,7 +34,6 @@ describe('TaskHeader', () => {
     expect(inputElement).toHaveAttribute('type', 'text');
   });
 
-
   it('should call onSearchChange when input value changes', () => {
     const handleSearchChange = vi.fn();
     render(<TaskHeader searchValue="123" onSearchChange={handleSearchChange} />);
@@ -42,5 +41,4 @@ describe('TaskHeader', () => {
     fireEvent.change(inputElement, { target: { value: 'New Task' } });
     expect(handleSearchChange).toHaveBeenCalledWith('New Task');
   });
-
 });

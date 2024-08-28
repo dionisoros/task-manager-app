@@ -49,15 +49,16 @@ describe('TaskView', () => {
     });
   });
 
-  const renderTaskView =  () => render(
-    <Provider store={store}>
-      <TaskView />
-    </Provider>
-  );
+  const renderTaskView = () =>
+    render(
+      <Provider store={store}>
+        <TaskView />
+      </Provider>,
+    );
 
   it('should display SkeletonLoading when tasks are loading', () => {
     (getIsLoadingTasks as Mock).mockReturnValue(true);
-    renderTaskView()
+    renderTaskView();
     expect(screen.getByTestId('skeleton-loading')).toBeInTheDocument();
   });
 
@@ -69,20 +70,20 @@ describe('TaskView', () => {
         description: 'Description 1',
         status: 'completed',
         dueDate: '19/03/2024',
-        creationDate: '19/02/2024'
-      }
+        creationDate: '19/02/2024',
+      },
     ]);
     (getPages as Mock).mockReturnValue(3);
     (getShowPagination as Mock).mockReturnValue(true);
 
-    renderTaskView()
+    renderTaskView();
 
     expect(screen.getByRole('navigation')).toBeInTheDocument(); // Pagination
   });
 
   it('should not display Pagination when there is only one page', () => {
     (getShowPagination as Mock).mockReturnValue(false);
-    renderTaskView()
+    renderTaskView();
     expect(screen.queryByRole('navigation')).not.toBeInTheDocument();
   });
 });

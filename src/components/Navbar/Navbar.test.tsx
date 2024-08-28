@@ -12,7 +12,6 @@ vi.mock('@mui/material', async () => ({
   useMediaQuery: vi.fn(),
 }));
 
-
 // Mock useTranslationMenu hook
 vi.mock('@/hooks/useTranslationMenu.ts', () => ({
   __esModule: true,
@@ -26,13 +25,12 @@ vi.mock('@/hooks/useTranslationMenu.ts', () => ({
   })),
 }));
 
-
 describe('Navbar Component', () => {
   it('should render Navbar with correct elements', () => {
     render(
       <MemoryRouter initialEntries={[RouterUrl.Home]}>
         <Navbar darkMode={false} setDarkMode={vi.fn()} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     expect(screen.getByText('app.title')).toBeInTheDocument();
@@ -45,7 +43,7 @@ describe('Navbar Component', () => {
     render(
       <MemoryRouter initialEntries={[RouterUrl.Home]}>
         <Navbar darkMode={false} setDarkMode={setDarkMode} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     fireEvent.click(screen.getByTestId('dark-mode-toggle-button'));
@@ -70,7 +68,7 @@ describe('Navbar Component', () => {
     render(
       <MemoryRouter initialEntries={[RouterUrl.Home]}>
         <Navbar darkMode={false} setDarkMode={vi.fn()} />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
 
     fireEvent.click(screen.getByTestId('language-button'));
@@ -80,5 +78,4 @@ describe('Navbar Component', () => {
     fireEvent.click(screen.getByTestId('language-en'));
     expect(handleLanguageChange).toHaveBeenCalledWith(LanguageTypes.EN);
   });
-
 });

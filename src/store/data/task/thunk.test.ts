@@ -26,26 +26,26 @@ describe('fetchTasks thunk', () => {
       items: 1,
       data: [
         {
-          id: "1",
-          title: "Mock title",
-          description: "Mock description",
-          status: "in-progress",
-          dueDate: "02/09/2024",
-          creationDate: "01/09/2024"
-        }
-      ]
+          id: '1',
+          title: 'Mock title',
+          description: 'Mock description',
+          status: 'in-progress',
+          dueDate: '02/09/2024',
+          creationDate: '01/09/2024',
+        },
+      ],
     };
 
-    const mockData ={
+    const mockData = {
       data: [
         {
           id: '1',
-          title: "Mock title",
-          description: "Mock description",
+          title: 'Mock title',
+          description: 'Mock description',
           status: 'in-progress',
           dueDate: '09-01-2024',
-          creationDate: '09-01-2024'
-        }
+          creationDate: '09-01-2024',
+        },
       ],
       count: 1,
       totalPages: 1,
@@ -53,8 +53,8 @@ describe('fetchTasks thunk', () => {
       firstPage: 1,
       lastPage: 1,
       nextPage: null,
-      prevPage: null
-    }
+      prevPage: null,
+    };
     vi.mocked(get).mockResolvedValue(mockTasks);
 
     const store = mockStore;
@@ -77,5 +77,4 @@ describe('fetchTasks thunk', () => {
     expect(fetchTasks.rejected.match(resultAction)).toBe(true);
     expect(store.getState().data.isLoading).toBe(false);
   });
-
 });

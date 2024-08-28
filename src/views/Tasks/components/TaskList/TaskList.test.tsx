@@ -5,7 +5,7 @@ import { Task } from '@/store/data/task/types';
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     // t: (key: string) => en["translation"][key as keyof typeof en["translation"]],  // if we want to check by the key translation value
-    t: (key: string) => key
+    t: (key: string) => key,
   }),
 }));
 

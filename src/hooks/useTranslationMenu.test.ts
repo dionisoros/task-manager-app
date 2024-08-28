@@ -1,4 +1,4 @@
-import { MouseEvent } from "react";
+import { MouseEvent } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useTranslation } from 'react-i18next';
 import useTranslationMenu from '@/hooks/useTranslationMenu';

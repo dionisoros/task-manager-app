@@ -1,27 +1,16 @@
-import {ChangeEvent} from "react";
+import { ChangeEvent } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useDispatch } from 'react-redux';
 import { fetchTasks } from '@/store/data/task/thunks.ts';
 import useGetTasks from '@/hooks/useGetTasks';
 import { vi } from 'vitest';
 
-// Mock dependencies
 vi.mock('react-redux', () => ({
   useDispatch: vi.fn(),
 }));
 
-vi.mock('@/store/data/task/thunks.ts', () => ({
+vi.mock('@/store/data/task/thunks', () => ({
   fetchTasks: vi.fn(),
-}));
-
-vi.mock('@mui/material', () => ({
-  debounce: (fn: any, delay: number) => {
-    let timer: NodeJS.Timeout;
-    return (args: any) => {
-      clearTimeout(timer);
-      timer = setTimeout(() => fn(args), delay);
-    };
-  },
 }));
 
 describe('useGetTasks', () => {
@@ -53,7 +42,7 @@ describe('useGetTasks', () => {
     expect(result.current.searchValue).toBe('test');
 
     await act(async () => {
-      await new Promise((resolve) => setTimeout(resolve, 350));
+      await new Promise(resolve => setTimeout(resolve, 350));
     });
 
     expect(mockDispatch).toHaveBeenCalledTimes(2);
