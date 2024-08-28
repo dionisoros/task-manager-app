@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FunctionComponent, memo } from 'react';
+import { FunctionComponent, memo } from 'react';
 import { TextField, Box, Typography, useMediaQuery } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 

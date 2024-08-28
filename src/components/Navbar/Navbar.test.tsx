@@ -4,7 +4,7 @@ import { vi, Mock } from 'vitest';
 import useTranslationMenu from '@/hooks/useTranslationMenu';
 import LanguageTypes from '@/types/Language';
 import RouterUrl from '@/types/RouterUrl.ts';
-import {MemoryRouter, useLocation} from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 
 vi.mock('@mui/material', async () => ({
