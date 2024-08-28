@@ -20,19 +20,15 @@ const Home: FunctionComponent = () => {
       gap="2rem"
       padding="2rem"
     >
-      <Box
-        sx={{
-          animation: `${fadeInDown} 1.5s ease-in-out`,
-          display: 'flex',
-          gap: '1rem',
-          alignItems: 'center',
-        }}
-      >
-        <Typography variant="h4" whiteSpace="nowrap">
-          {translate('app.translation.HelloMessage')}
-        </Typography>
+      <Typography variant="h4" whiteSpace="nowrap" sx={{
+        animation: `${fadeInDown} 1.5s ease-in-out`,
+        display: 'flex',
+        gap: '0.5rem',
+        alignItems: 'center'
+      }}>
+        {translate('app.translation.HelloMessage')}
         <EmojiEmotionsIcon sx={{ fontSize: '3rem' }} />
-      </Box>
+      </Typography>
       <Button
         component={Link}
         to={RouterUrl.Tasks}
