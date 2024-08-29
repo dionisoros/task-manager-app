@@ -1,15 +1,17 @@
 import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
-import { fetchTasks } from '@/store/data/task/thunks.ts';
+import { fetchTasks, FetchTasksParams } from '@/store/data/task/thunks.ts';
 import { debounce } from '@mui/material';
 import { useDispatch } from 'react-redux';
 import { ThunkDispatch } from '@reduxjs/toolkit';
+import { TaskPayload } from '@/store/data/task/types.ts';
 
 const useGetTasks = (currentPage: number) => {
-  const dispatch = useDispatch<ThunkDispatch<any, any, any>>();
+  const dispatch = useDispatch<ThunkDispatch<TaskPayload, FetchTasksParams, any>>();
   const [searchValue, setSearchValue] = useState<string>('');
 
   useEffect(() => {
     dispatch(fetchTasks({ page: currentPage }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   const debouncedFn = useMemo(
@@ -17,6 +19,7 @@ const useGetTasks = (currentPage: number) => {
       debounce((value: string) => {
         dispatch(fetchTasks({ page: currentPage, title: value }));
       }, 300),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [dispatch],
   );
 

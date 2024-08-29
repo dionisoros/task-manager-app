@@ -2,7 +2,7 @@ import { ChangeEvent } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { useDispatch } from 'react-redux';
 import { fetchTasks } from '@/store/data/task/thunks.ts';
-import useGetTasks from '@/hooks/useGetTasks';
+import useGetTasks from './useGetTasks';
 import { vi } from 'vitest';
 
 vi.mock('react-redux', () => ({
@@ -18,10 +18,8 @@ describe('useGetTasks', () => {
   const mockFetchTasks = fetchTasks;
 
   beforeEach(() => {
-    // @ts-ignore
     useDispatch.mockReturnValue(mockDispatch);
     mockDispatch.mockClear();
-    // @ts-ignore
     mockFetchTasks.mockClear();
   });
 

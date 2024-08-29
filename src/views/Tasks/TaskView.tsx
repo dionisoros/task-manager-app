@@ -11,8 +11,8 @@ import {
 import TaskList from './components/TaskList';
 import TaskHeader from './components/TaskHeader';
 import paginationStyles from './styles/paginationStyles';
-import useGetTasks from '@/hooks/useGetTasks.ts';
 import SkeletonLoading from '@/components/Skeleton';
+import useGetTasks from './hooks/useGetTasks';
 
 const TaskView: FunctionComponent = () => {
   const tasks = useSelector(getTasks);

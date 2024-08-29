@@ -3,6 +3,7 @@
     "app.title": "Gestionnaire de tâches",
     "app.translation.language.en": "Anglais",
     "app.translation.language.fr": "Français",
+    "app.translation.button.LanguageSelector": "Changer la langue de l'application",
     "app.translation.task.status.ReadyForWork": "Prêt pour le travail",
     "app.translation.task.status.InProgress": "En cours",
     "app.translation.task.status.Completed": "Terminé",

@@ -13,13 +13,15 @@ const App: FunctionComponent = () => {
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
-      <Box display="flex" flexDirection="column" height="100%">
-        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
-        <Routes>
-          <Route path={RouterUrl.Home} element={<Home />} />
-          <Route path={RouterUrl.Tasks} element={<TaskView />} />
-        </Routes>
-      </Box>
+      <main>
+        <Box display="flex" flexDirection="column" height="100%">
+          <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+          <Routes>
+            <Route path={RouterUrl.Home} element={<Home />} />
+            <Route path={RouterUrl.Tasks} element={<TaskView />} />
+          </Routes>
+        </Box>
+      </main>
     </ThemeProvider>
   );
 };

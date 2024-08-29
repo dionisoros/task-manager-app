@@ -4,7 +4,6 @@ import { Task } from './types.ts';
 export const getTasks = (state: State): Task[] => state.data.tasks.list.data;
 export const getIsLoadingTasks = (state: State): boolean => state.data.tasks.isLoading;
 
-export const getItemsCount = (state: State): number => state.data.tasks.list.count;
 export const getPages = (state: State): number => state.data.tasks.list.totalPages;
 
 export const getCurrentPage = (state: State): number => state.data.tasks.list.currentPage;

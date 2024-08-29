@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import eslintPluginPrettier from 'eslint-plugin-prettier';
+import { fixupPluginRules } from '@eslint/compat';
 
 export default tseslint.config(
     { ignores: ['node_modules/', 'build/', 'dist'] },
@@ -15,7 +16,7 @@ export default tseslint.config(
             globals: globals.browser,
         },
         plugins: {
-            'react-hooks': reactHooks,
+            'react-hooks': fixupPluginRules(reactHooks),
             'react-refresh': reactRefresh,
             prettier: eslintPluginPrettier
         },
@@ -26,6 +27,7 @@ export default tseslint.config(
                 { allowConstantExport: true },
             ],
             'react-hooks/exhaustive-deps': 'warn',
+            '@typescript-eslint/no-explicit-any': 'warn'
         },
     }
 );

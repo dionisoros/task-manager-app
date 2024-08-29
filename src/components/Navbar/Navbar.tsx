@@ -68,6 +68,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             data-testid="language-button"
             onClick={handleOnClickLanguage}
             id="language-button"
+            aria-label={translate('app.translation.button.LanguageSelector')}
             aria-haspopup="true"
             aria-expanded={menuEl ? 'true' : undefined}
             aria-controls={menuEl ? 'language-menu' : undefined}

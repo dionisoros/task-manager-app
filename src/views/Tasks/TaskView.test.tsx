@@ -11,10 +11,10 @@ import {
   getShowPagination,
   getTasks,
 } from '@/store/data/task/selectors.ts';
-import useGetTasks from '@/hooks/useGetTasks.ts';
+import useGetTasks from './hooks/useGetTasks';
 
 // Mock necessary parts
-vi.mock('@/hooks/useGetTasks.ts', () => ({
+vi.mock('./hooks/useGetTasks', () => ({
   default: vi.fn(),
 }));
 
