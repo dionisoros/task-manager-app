@@ -2,11 +2,11 @@ import { ChangeEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { fetchTasks, FetchTasksParams } from '@/store/data/task/thunks.ts';
 import { debounce } from '@mui/material';
 import { useDispatch } from 'react-redux';
-import { ThunkDispatch } from '@reduxjs/toolkit';
+import { Action, ThunkDispatch } from '@reduxjs/toolkit';
 import { TaskPayload } from '@/store/data/task/types.ts';
 
 const useGetTasks = (currentPage: number) => {
-  const dispatch = useDispatch<ThunkDispatch<TaskPayload, FetchTasksParams, any>>();
+  const dispatch = useDispatch<ThunkDispatch<TaskPayload, FetchTasksParams, Action>>();
   const [searchValue, setSearchValue] = useState<string>('');
 
   useEffect(() => {
