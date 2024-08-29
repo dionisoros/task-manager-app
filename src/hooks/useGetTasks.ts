@@ -10,14 +10,14 @@ const useGetTasks = (currentPage: number) => {
 
   useEffect(() => {
     dispatch(fetchTasks({ page: currentPage }));
-  }, [dispatch]);
+  }, [dispatch, currentPage]);
 
   const debouncedFn = useMemo(
     () =>
       debounce((value: string) => {
         dispatch(fetchTasks({ page: currentPage, title: value }));
       }, 300),
-    [dispatch],
+    [dispatch, currentPage],
   );
 
   const handleOnSearch = useCallback(

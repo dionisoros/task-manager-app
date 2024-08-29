@@ -69,8 +69,8 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode }) => {
             onClick={handleOnClickLanguage}
             id="language-button"
             aria-haspopup="true"
-            aria-expanded={!!menuEl ? 'true' : undefined}
-            aria-controls={!!menuEl ? 'language-menu' : undefined}
+            aria-expanded={menuEl ? 'true' : undefined}
+            aria-controls={menuEl ? 'language-menu' : undefined}
           >
             <LanguageIcon />
           </IconButton>
