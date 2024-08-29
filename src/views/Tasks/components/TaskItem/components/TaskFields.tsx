@@ -72,7 +72,7 @@ const TaskFields: FunctionComponent<TaskItemContentProps> = ({ title, descriptio
         <Box display="flex" alignItems="center" gap="4px">
           <CalendarTodayIcon fontSize="small" />
           <Typography variant="body2" color="text.secondary">
-            {translate('app.translation.DueDate')}: {dueDate}
+            {translate('app.translation.task.DueDate')}: {dueDate}
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" gap="4px">
@@ -86,7 +86,7 @@ const TaskFields: FunctionComponent<TaskItemContentProps> = ({ title, descriptio
               alignItems: 'center',
             }}
           >
-            {translate('app.translation.Created')}: {creationDate}
+            {translate('app.translation.task.Created')}: {creationDate}
           </Typography>
         </Box>
       </Box>
