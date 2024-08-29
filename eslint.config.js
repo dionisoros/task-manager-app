@@ -26,7 +26,6 @@ export default tseslint.config(
                 { allowConstantExport: true },
             ],
             'react-hooks/exhaustive-deps': 'warn',
-            'prettier/prettier': 'error', // Run Prettier as an ESLint rule
         },
     }
 );
